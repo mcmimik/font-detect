@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>FontDetect.js Demo</title>
+		<script src="FontDetect.js"></script>
+		<script>
+			function initialize(){
+
+				// log fonts
+				if( FontDetect.hasFlash ){
+					var log = document.createElement("script");
+					log.src = "http://www.fockjef.net/fonts/logfonts.pl?"+FontDetect.getAllFonts().join(",");
+					document.head.appendChild(log);
+				}
+
+				var Fonts = FontDetect.enumerate();
+				var tbl = document.createElement("table");
+				Fonts.forEach(function(f){
+					var row = tbl.insertRow(-1);
+					row.style.font = "22px "+FontDetect.escapeFont(f);
+					row.insertCell(-1).innerHTML = f+(FontDetect.isMono(f)?"*":"");
+					row.insertCell(-1).innerHTML = "The quick brown fox jumps over the lazy dog";
+				});
+				document.body.appendChild(tbl);
+			}
+
+			window.onload = function(){
+				if( FontDetect ){
+					 FontDetect.load(initialize,"FontDetect.swf");
+				}
+				else{
+					 alert("browser sooooooooooo dinosaur");
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<h1>FontDetect.js Demo</h1>
+	</body>
+</html>
