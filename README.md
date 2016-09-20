@@ -12,4 +12,4 @@ Javascript font detection using HTML5 canvas and Flash if supported
 | `FontDetect.getAllFonts()` | returns an Array of the font list used for enumeration
 | `FontDetect.escapeFont(f)` | takes a font name *f* as a string and returns the string properly escaped
 
-##### Demo [here](https://fockjef.github.io/font-detect/demo.html)
+##### Demo [here](http://fockjef.net/fonts/)
