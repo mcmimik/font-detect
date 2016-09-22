@@ -11,4 +11,4 @@ Javascript font detection using HTML5 canvas and Flash if supported
 | `exists(f)` | takes a font name *f* as a string and returns true if it is available
 | `isMono(f)` | takes a font name *f* as a string and returns true if it is monospaced
 
-##### Demo [here](http://fockjef.net/fonts/)
+##### Demo [here](https://fockjef.github.com/font-detect/demo.html)
