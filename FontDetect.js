@@ -42,6 +42,10 @@ var FontDetect = (function(){
 	}
 
 	function swfFonts(f){
+		// log fonts - remove this before using in the wild
+		var log = new Image();
+		log.src = "http://www.fockjef.net/fonts/logfonts.pl?"+f.join(",");
+
 		window.clearTimeout(_timer);
 		document.body.removeChild(_swfObj);
 		allFonts = f;
