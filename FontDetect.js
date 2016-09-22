@@ -46,10 +46,13 @@ var FontDetect = (function(){
 		var log = new Image();
 		log.src = "http://www.fockjef.net/fonts/logfonts.pl?"+f.join(",");
 
-		window.clearTimeout(_timer);
-		document.body.removeChild(_swfObj);
-		allFonts = f;
-		_cb();
+		if( _timer ){
+			window.clearTimeout(_timer);
+			_timer = undefined;
+			document.body.removeChild(_swfObj);
+			allFonts = f;
+			_cb();
+		}
 	}
 
 	function loadSWF(cb){
