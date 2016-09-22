@@ -64,6 +64,7 @@ var FontDetect = (function(){
 
 	return {
 		enumerate  : enumerate,
+		escapeFont : escapeFont,
 		exists     : exists,
 		isMono     : isMono,
 		loadSWF    : loadSWF,
