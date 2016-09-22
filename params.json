@@ -1,6 +1,6 @@
 {
   "name": "Font-detect",
   "tagline": "",
-  "body": "Demo [here](demo.html)",
+  "body": "# font-detect  \r\nJavascript font detection using HTML5 canvas and Flash if supported\r\n\r\n### Usage: FontDetect.loadSWF( *callback-function* )  \r\n\r\n|Method|Description|\r\n|:---|:---|\r\n| `loadSWF(cb)` | dynamically loads Flash font detection swf and executes `cb` on completion\r\n| `enumerate()` | returns an Array of available fonts\r\n| `exists(f)` | takes a font name *f* as a string and returns true if it is available\r\n| `isMono(f)` | takes a font name *f* as a string and returns true if it is monospaced\r\n| `escapeFont(f)` | takes a font name *f* as a string and returns the string properly escaped\r\n\r\n##### Demo [here](https://fockjef.github.com/font-detect/demo.html)\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
