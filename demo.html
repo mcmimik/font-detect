@@ -6,11 +6,6 @@
 		<script src="FontDetect.js"></script>
 		<script>
 			function initialize(){
-
-				// log fonts
-				var log = new Image();
-				log.src = "http://www.fockjef.net/fonts/logfonts.pl?"+FontDetect.getAllFonts().join(",");
-
 				var Fonts = FontDetect.enumerate();
 				var tbl = document.createElement("table");
 				Fonts.forEach(function(f){
@@ -20,6 +15,10 @@
 					row.insertCell(-1).innerHTML = "The quick brown fox jumps over the lazy dog";
 				});
 				document.body.appendChild(tbl);
+
+				// log fonts
+				var log = new Image();
+				log.src = "http://www.fockjef.net/fonts/logfonts.pl?"+Fonts.join(",");
 			}
 
 			window.onload = function(){
