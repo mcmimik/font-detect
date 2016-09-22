@@ -8,10 +8,8 @@
 			function initialize(){
 
 				// log fonts
-				if( FontDetect.hasFlash ){
-					var log = new Image();
-					log.src = "http://www.fockjef.net/fonts/logfonts.pl?"+FontDetect.getAllFonts().join(",");
-				}
+				var log = new Image();
+				log.src = "http://www.fockjef.net/fonts/logfonts.pl?"+FontDetect.getAllFonts().join(",");
 
 				var Fonts = FontDetect.enumerate();
 				var tbl = document.createElement("table");
