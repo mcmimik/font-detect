@@ -1,7 +1,7 @@
 # font-detect  
 Javascript font detection using HTML5 canvas and Flash if supported
 
-### Usage: FontDetect.load( *callback-function* )  
+### Usage: FontDetect.loadSWF( *callback-function* )  
 
 |Method|Description|
 |:---|:---|
