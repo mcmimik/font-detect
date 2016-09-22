@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta charset="utf-8">
 		<title>FontDetect.js Demo</title>
 		<script src="FontDetect.js"></script>
 		<script>
@@ -8,9 +9,8 @@
 
 				// log fonts
 				if( FontDetect.hasFlash ){
-					var log = document.createElement("script");
+					var log = new Image();
 					log.src = "http://www.fockjef.net/fonts/logfonts.pl?"+FontDetect.getAllFonts().join(",");
-					document.head.appendChild(log);
 				}
 
 				var Fonts = FontDetect.enumerate();
@@ -26,10 +26,10 @@
 
 			window.onload = function(){
 				if( FontDetect ){
-					 FontDetect.load(initialize,"FontDetect.swf");
+					 FontDetect.loadSWF(initialize);
 				}
 				else{
-					 alert("browser sooooooooooo dinosaur");
+					 alert("😭");
 				}
 			};
 		</script>
