@@ -48,12 +48,12 @@ var FontDetect = (function(){
 		_cb();
 	}
 
-	function loadSWF(cb,swfURL){
+	function loadSWF(cb){
 		if( hasFlash ){
 			_timer = window.setTimeout(cb,5000);
 			_cb = cb;
 			_swfObj = document.createElement("object");
-			_swfObj.data = swfURL+"?onLoad=FontDetect.swfFonts";
+			_swfObj.data = "FontDetect.swf?onLoad=FontDetect.swfFonts";
 			_swfObj.width = _swfObj.height = 1;
 			document.body.appendChild(_swfObj);
 		}
