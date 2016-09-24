@@ -10,7 +10,7 @@
 				var tbl = document.createElement("table");
 				Fonts.forEach(function(f){
 					var row = tbl.insertRow(-1);
-					row.style.font = "22px "+FontDetect.escapeFont(f);
+					row.style.font = "22px "+f;
 					row.insertCell(-1).innerHTML = f+(FontDetect.isMono(f)?"*":"");
 					row.insertCell(-1).innerHTML = "The quick brown fox jumps over the lazy dog";
 				});
