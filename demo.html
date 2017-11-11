@@ -3,20 +3,20 @@
 	<head>
 		<meta charset="utf-8">
 		<title>FontDetect.js Demo</title>
-		<script src="FontDetect.js"></script>
+		<script src="https://raw.githubusercontent.com/fockjef/font-detect/master/FontDetect.js"></script>
 		<script>
 			function initialize(){
 				var Fonts = FontDetect.enumerate();
 				var tbl = document.createElement("table");
 				Fonts.forEach(function(f){
 					var row = tbl.insertRow(-1);
-					row.style.font = "22px "+f;
 					row.insertCell(-1).innerHTML = f+(FontDetect.isMono(f)?"*":"");
-					row.insertCell(-1).innerHTML = "The quick brown fox jumps over the lazy dog";
+					var text = row.insertCell(-1);
+					text.style.font = "22px "+f;
+					text.innerHTML = "The quick brown fox jumps over the lazy dog";
 				});
 				document.body.appendChild(tbl);
 			}
-
 			window.onload = function(){
 				if( FontDetect ){
 					 FontDetect.loadSWF(initialize);
