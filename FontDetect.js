@@ -1,9 +1,9 @@
 var FontDetect = (function(){
-    var SWFPath  = "FontDetect.swf",
-        timeout  = 5000,
-        fudge    = 1,
+    var SWFPath = "FontDetect.swf",
+        timeout = 5000,
+        fudge   = 1,
         /* ------------------------- *
-         * Do Not Touch				 *
+         * Do Not Touch              *
          * ------------------------- */
         testText = " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~",
         fontSize = 32,
