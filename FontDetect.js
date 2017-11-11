@@ -1,5 +1,5 @@
 var FontDetect = (function(){
-    var SWFPath  = "https://raw.githubusercontent.com/fockjef/font-detect/master/FontDetect.swf",
+    var SWFPath  = "FontDetect.swf",
         timeout  = 5000,
         fudge    = 1,
         /* ------------------------- *
