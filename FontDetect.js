@@ -27,7 +27,7 @@ var FontDetect = (function(){
         var w = ctx.measureText(testText).width;
         for( var i = 1; i < genFonts.length; i++ ){
             ctx.font = fontSize+"px "+f+","+genFonts[i];
-            if( ctx.measureText(testText).width != w ) return false;
+            if( ctx.measureText(testText).width !== w ) return false;
         }
         return true;
     }
@@ -44,7 +44,7 @@ var FontDetect = (function(){
     }
 
     function enumerate(){
-        return allFonts.concat(genFonts).filter(function(f){return exists(f)}).sort().map(function(f){return escapeFont(f)});
+        return allFonts.concat(genFonts).filter(exists).sort().map(escapeFont);
     }
 
     function swfFonts(f){
